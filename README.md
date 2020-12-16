@@ -16,4 +16,7 @@ In embedded programming (expecially programming MCUs) you dont want dynamic stru
 When transmitting files, the byte-data have to be encoded in some way. The bytes cannot be converted directly to characters as there might be bytes that have no visible character represention or have ambilious interpretations. 
 Therefore we need an Binary-to-text encoding (When the protocol only supports text). As solution might be base64 encoding, where 24 bit will be encoded in 4 characters (32-bit). By base64 6 bit are represented by an printeable character. So when using base64 the efficency is 75% (we need 32 Bit [4 chars] to transmit 24 bit). There are other encodings that have more efficency (see https://en.wikipedia.org/wiki/Binary-to-text_encoding).
 
+## Pointers (C/C++)
+
+Wenn man mit Pointer arbeitet, dann sind diese immer an einen Datentyp gebunden. Dadurch erhält man die Möglichkeit dann auch Speicherarithmetik durchzuführen. Ansonsten bekommt man dann aber auch eine Fehlermeldung wenn man einen falschen Pointer speicher will. Will man keine Fehlermeldung erhalten, muss man einen Null Pointer nutzen (void * ptr). Damit verliert man dann aber die möglichkeit entsprechende Speicherarithmetik durchzuführen.
 
